@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIAP MEDICINE</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+</head>
+<body>
+  <button class="toggle-mode" onclick="alternarModo()">🌙 Alternar Modo</button>
+  <div class="container" id="login-container">
+    <h1>Sistema de Consultas - Login</h1>
+    <div class="form-group">
+      <input type="email" id="loginEmail" placeholder="Email">
+      <input type="password" id="loginSenha" placeholder="Senha">
+      <button onclick="fazerLogin()">Login</button>
+    </div>
+  </div>
+
+  <div class="container" id="main-container" style="display: none;">
+    <h1>Bem-vindo <span id="usuarioNome"></span></h1>
+
+    <div id="adminOptions" style="display: none;">
+      <h2>Cadastro de Pacientes</h2>
+      <div class="form-group">
+        <input type="text" id="pacienteNome" placeholder="Nome do paciente">
+        <input type="text" id="pacienteCpf" placeholder="CPF">
+        <input type="email" id="pacienteEmail" placeholder="Email">
+        <input type="password" id="pacienteSenha" placeholder="Senha">
+        <button onclick="cadastrarPaciente()">Cadastrar Paciente</button>
+      </div>
+
+      <h2>Cadastro de Médicos</h2>
+      <div class="form-group">
+        <input type="text" id="medicoNome" placeholder="Nome do médico">
+        <input type="text" id="medicoCrm" placeholder="CRM">
+        <input type="email" id="medicoEmail" placeholder="Email">
+        <input type="password" id="medicoSenha" placeholder="Senha">
+        <button onclick="cadastrarMedico()">Cadastrar Médico</button>
+      </div>
+    </div>
+
+    <h2>Marcar Consulta</h2>
+    <div class="form-group">
+      <label>Paciente</label>
+      <select id="selectPaciente"></select>
+    </div>
+    <div class="form-group">
+      <label>Médico</label>
+      <select id="selectMedico"></select>
+    </div>
+    <div class="form-group">
+      <input type="date" id="data">
+      <input type="time" id="horario">
+      <button onclick="marcarConsulta()">Marcar Consulta</button>
+    </div>
+
+    <h2>Consultas Marcadas</h2>
+    <div id="listaConsultas"></div>
+  </div>
+  <footer>
+    <p>Integrantes:<br>
+       Felipe Krzyzanovski - RM564878<br>
+       Gabriel Hiro - RM562221<br>
+       Giovanni De Lela - RM563066<br>
+       Leonardo Lopes - RM565437<br>
+       Murilo Godoy - RM564840<br>
+  </p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
